@@ -1,0 +1,12 @@
+----README-----
+
+GROUP NAME - ForCache
+
+1) The simplesim3.0 folder consists of default cache. Running sim-cache with them would give default miss values.
+2) To apply implementation of Prefetch on a miss, replace cache.c and cache.h in simplesim3.0 with cache.c and cache.h in PrefetchOnMiss folder.
+3) Run make cmd to execute, sometimes the make cmd just shows "my work here is done" without actually doing anything. If that happens and you run the sim-cache , then it would still give values corresponding to default cache. A workaround that we did was purposely induce a syntax error in a file like cache.h (e.g remove semicolon) and then run make. Make will now display error, once that happens fix that error, save that file and run make cmd again. This time it should execute properly and it will give new values for sim-cache.
+4) All the test benches along with the binaries are placed in TestBeches folder, To generate the binaries using little-endian a MakeFile is made with all the list of testbenches which generates binaries, but for our execution we can just use the binaries directly. Copy the binaries into tests folder in simplesim3.0 and using the command line provided below test benches can be run directly.
+
+./sim-cache tests/anagram
+
+5) DO the same process for One Block lookahead prefetching.

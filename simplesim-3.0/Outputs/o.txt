@@ -1,0 +1,1 @@
+Usage: anagram dictionary [length]
